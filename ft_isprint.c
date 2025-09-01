@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 02:55:23 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/26 03:07:29 by victode-         ###   ########.fr       */
+/*   Updated: 2025/09/01 12:03:55 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }

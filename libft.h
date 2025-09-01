@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 22:40:45 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/01 01:09:48 by victode-         ###   ########.fr       */
+/*   Updated: 2025/09/01 12:01:30 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
-# define TRUE 1
-# define FALSE 0
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
