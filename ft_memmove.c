@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 02:19:51 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/29 14:42:07 by victode-         ###   ########.fr       */
+/*   Updated: 2025/09/01 00:58:35 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	src_byte = (const char *)src;
 	dst_byte = (char *)dest;
-	if (!dest || !src)
-		return (NULL);
 	if (src < dest)
 	{
 		i = n;

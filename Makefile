@@ -6,7 +6,7 @@
 #    By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/25 22:40:56 by victode-          #+#    #+#              #
-#    Updated: 2025/08/31 03:30:29 by victode-         ###   ########.fr        #
+#    Updated: 2025/08/31 23:48:49 by victode-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-# Rule: re = equivalent to -make fclean- and -make all-
+# Rule: re = equivalent to <make fclean> and <make all>
 re: fclean all
 
 #test: $(NAME) main.c
