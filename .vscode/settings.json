@@ -3,7 +3,7 @@
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": false,
-	"workbench.colorTheme": "One Dark Pro Night Flat",
+	"workbench.colorTheme": "Bearded Theme Monokai Black",
 	"editor.fontFamily": "Ubuntu Mono",
 	"editor.fontSize": 15,
 	"C_Cpp.errorSquiggles": "disabled",
