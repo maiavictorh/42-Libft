@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 19:14:22 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/28 01:01:38 by victode-         ###   ########.fr       */
+/*   Updated: 2025/09/09 21:52:11 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)s + i);
 		i--;
 	}
-	if (c == 0)
+	if ((unsigned char)c == 0)
 		return ((char *)s);
 	return (NULL);
 }

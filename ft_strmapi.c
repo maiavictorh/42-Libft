@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 22:41:12 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/08 03:13:51 by victode-         ###   ########.fr       */
+/*   Created: 2025/09/08 18:11:27 by victode-          #+#    #+#             */
+/*   Updated: 2025/09/09 21:39:53 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	res;
-	int	sign;
+	size_t	i;
+	char	*res;
 
-	res = 0;
-	sign = 1;
-	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	res = (char *)malloc(ft_strlen(s) + 1);
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		if (*nptr == '-')
-			sign = -sign;
-		nptr++;
+		res[i] = f(i, s[i]);
+		i++;
 	}
-	while (ft_isdigit(*nptr))
-	{
-		res = res * 10 + (*nptr - '0');
-		nptr++;
-	}
-	return (sign * res);
+	res[i] = 0;
+	return (res);
 }

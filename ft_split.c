@@ -6,13 +6,13 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 16:22:09 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/28 01:07:30 by victode-         ###   ########.fr       */
+/*   Updated: 2025/09/09 19:17:46 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	word_len(char const *s, char c)
+static size_t	ft_word_len(char const *s, char c)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ static size_t	word_len(char const *s, char c)
 	return (i);
 }
 
-static size_t	word_count(char const *s, char c)
+static size_t	ft_word_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -59,7 +59,7 @@ static char	*ft_strndup(const char *s, size_t n)
 	return (dup);
 }
 
-static char	**split_words(char const *s, char c, char **split)
+static char	**ft_split_words(char const *s, char c, char **split)
 {
 	size_t	i;
 	size_t	j;
@@ -73,7 +73,7 @@ static char	**split_words(char const *s, char c, char **split)
 			i++;
 		if (s[i] && s[i] != c)
 		{
-			wd_len = word_len(s + i, c);
+			wd_len = ft_word_len(s + i, c);
 			split[j++] = ft_strndup(s + i, wd_len);
 			i += wd_len;
 		}
@@ -88,9 +88,9 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	split = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
+	split = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (!split)
 		return (NULL);
-	split_words(s, c, split);
+	ft_split_words(s, c, split);
 	return (split);
 }
