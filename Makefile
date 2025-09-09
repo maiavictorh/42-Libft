@@ -6,7 +6,7 @@
 #    By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/25 22:40:56 by victode-          #+#    #+#              #
-#    Updated: 2025/08/31 23:48:49 by victode-         ###   ########.fr        #
+#    Updated: 2025/09/10 00:11:39 by victode-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,12 +14,20 @@
 NAME= libft.a
 
 # Files to compile
-SRCS= $(wildcard *.c)
-OBJS= $(SRCS:.c=.o)
+SRCS= $(wildcard srcs/ft_conv/*.c) \
+		$(wildcard srcs/ft_mem/*.c) \
+		$(wildcard srcs/ft_put/*.c) \
+		$(wildcard srcs/ft_str/*.c) \
+		$(wildcard srcs/ft_type/*.c)
+BONUS= $(wildcard srcs/ft_list/*.c)
 
-# Compile and Flag commands
+# Object files
+OBJS= $(SRCS:.c=.o)
+BNS_OBJS= $(BONUS:.c=.o)
+
+# Compile and Flags commands
 CC= cc
-FLAGS= -Wall -Wextra -Werror
+FLAGS= -Wall -Wextra -Werror -Iincludes
 
 # Compress commands
 COMPRESS= ar rcs
@@ -50,7 +58,7 @@ fclean: clean
 # Rule: re = equivalent to <make fclean> and <make all>
 re: fclean all
 
-#test: $(NAME) main.c
-#	$(CC) $(CFLAGS) main.c -L. -lft
+# test: $(NAME) main.c
+# 	$(CC) $(FLAGS) main.c -L. -lft -o test
 
 .PHONY: all clean fclean re test
