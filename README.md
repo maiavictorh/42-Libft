@@ -1,6 +1,6 @@
 # 📝 Libft
 
-### 🌟 Your very first own library 
+### 🌟 "Your very first own library"
 
 **Libft** is the first project at 42, where we recreate basic functions from the C standard library and implement additional utility functions for string, memory, and data type handling.
 This project strengthens essential **C programming skills**, attention to detail, and good coding practices. 
