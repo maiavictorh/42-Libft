@@ -6,10 +6,17 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 15:04:54 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/10 15:05:05 by victode-         ###   ########.fr       */
+/*   Updated: 2025/09/11 01:36:59 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
+}

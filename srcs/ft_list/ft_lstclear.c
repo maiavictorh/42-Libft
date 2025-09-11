@@ -6,10 +6,24 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 15:05:33 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/10 15:05:45 by victode-         ###   ########.fr       */
+/*   Updated: 2025/09/11 01:39:59 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*next;
+
+	if (lst && del)
+	{
+		while (*lst)
+		{
+			next = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = next;
+		}
+	}
+	*lst = NULL;
+}
