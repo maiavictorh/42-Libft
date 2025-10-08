@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: victode- <victode-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 03:37:37 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/26 03:41:22 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/08 20:37:07 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c - 32);
+		c -= 32;
 	return (c);
 }

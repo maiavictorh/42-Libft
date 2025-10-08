@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: victode- <victode-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 03:42:44 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/26 03:44:42 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/08 20:37:21 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+		c += 32;
 	return (c);
 }
