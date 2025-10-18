@@ -6,28 +6,30 @@
 #    By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/25 22:40:56 by victode-          #+#    #+#              #
-#    Updated: 2025/09/11 02:11:17 by victode-         ###   ########.fr        #
+#    Updated: 2025/10/18 03:24:07 by victode-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Library name
 NAME= libft.a
 
-# Files to compile
-SRCS= $(wildcard srcs/ft_conv/*.c) \
-		$(wildcard srcs/ft_mem/*.c) \
-		$(wildcard srcs/ft_put/*.c) \
-		$(wildcard srcs/ft_str/*.c) \
-		$(wildcard srcs/ft_type/*.c)
-BONUS= $(SRCS) $(wildcard srcs/ft_list/*.c)
-
-# Object files
+# Source files and objects to compile
+SRCS= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
+		ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
+		ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c \
+		ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
+		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
+		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS= $(SRCS:.c=.o)
-BNS_OBJS= $(BONUS:.c=.o)
 
-# Compile and flag commands
+# Bonus files and objects to compile
+BONUS= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BON_OBJS= $(BONUS:.c=.o)
+
+# Compile and Flag commands
 CC= cc
-CFLAGS= -Wall -Wextra -Werror -Iincludes
+FLAGS= -Wall -Wextra -Werror
 
 # Compress commands
 COMPRESS= ar rcs
@@ -43,17 +45,17 @@ $(NAME): $(OBJS)
 	$(COMPRESS) $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-# Rule: bonus = compress bonus functions objects
-bonus: $(BNS_OBJS)
-	$(COMPRESS) $(NAME) $(BNS_OBJS)
+# Rule: bonus = 
+bonus: $(BON_OBJS)
+	$(COMPRESS) $(NAME) $(BON_OBJS)
 
 # Compile the objects
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 # Rule: clean = remove temporary files (objects)
 clean:
-	$(RM) $(OBJS) $(BNS_OBJS)
+	$(RM) $(OBJS)
 
 # Rule: fclean = remove all files (objects and libft.a)
 fclean: clean
@@ -62,7 +64,7 @@ fclean: clean
 # Rule: re = equivalent to <make fclean> and <make all>
 re: fclean all
 
-# test: $(NAME) main.c
-# 	$(CC) $(CFLAGS) main.c -L. -lft -o test
+#test: $(NAME) main.c
+#	$(CC) $(CFLAGS) main.c -L. -lft
 
 .PHONY: all clean fclean re test

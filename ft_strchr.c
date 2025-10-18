@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: victode- <victode-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 03:42:44 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/08 20:37:21 by victode-         ###   ########.fr       */
+/*   Created: 2025/08/27 13:59:31 by victode-          #+#    #+#             */
+/*   Updated: 2025/09/01 18:38:47 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if ((char)c == 0)
+		return ((char *)s);
+	return (NULL);
 }

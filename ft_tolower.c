@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 15:05:33 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/11 01:39:59 by victode-         ###   ########.fr       */
+/*   Created: 2025/08/26 03:42:44 by victode-          #+#    #+#             */
+/*   Updated: 2025/08/26 03:44:42 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+int	ft_tolower(int c)
 {
-	t_list	*next;
-
-	if (lst && del)
-	{
-		while (*lst)
-		{
-			next = (*lst)->next;
-			ft_lstdelone(*lst, del);
-			*lst = next;
-		}
-	}
-	*lst = NULL;
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
