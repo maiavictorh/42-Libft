@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 03:46:54 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/26 16:15:32 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 23:51:19 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+/*
+int main(void)
+{
+	const char *s1 = "Hello world!";
+	const char *s2 = "Hello World!";
+
+	printf("Result: %d;\n", ft_strncmp(s1, s2, 7));
+}
+*/

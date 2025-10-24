@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 12:09:32 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/01 18:19:41 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/25 00:26:53 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }
+/*
+int main(void)
+{
+	char *s = "Hello World!";
+	char *sub = ft_substr(s, 6, 10);
+
+	printf("Original: %s;\nSubstring: %s;\n", s, sub);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 23:27:03 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/06 23:54:39 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/25 00:47:49 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,10 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar_fd(nb % 10 + '0', fd);
 }
+/*
+int main(void)
+{
+	ft_putnbr_fd(2147483647, 1);
+	ft_putchar_fd('\n', 1);
+}
+*/

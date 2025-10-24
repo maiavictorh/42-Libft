@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 19:14:22 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/09 21:52:11 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 22:23:23 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,11 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+/*
+int main(void)
+{
+	const char *s = "Hello World!";
+
+	printf("Result: %s;\n", ft_strrchr(s, 'o'));
+}
+*/

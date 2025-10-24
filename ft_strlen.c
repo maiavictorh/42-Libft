@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 23:00:28 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/26 16:48:44 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 23:57:28 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,11 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+/*
+int main(void)
+{
+	const char *s = "Hello World!";
+
+	printf("Result: %lu;\n", ft_strlen(s));
+}
+*/

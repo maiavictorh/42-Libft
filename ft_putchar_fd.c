@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 23:24:11 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/06 23:24:45 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/25 00:48:42 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,9 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
+/*
+int main(void)
+{
+	ft_putchar_fd('\n', 1);
+}
+*/
