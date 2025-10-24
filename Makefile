@@ -6,7 +6,7 @@
 #    By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/25 22:40:56 by victode-          #+#    #+#              #
-#    Updated: 2025/10/18 03:24:07 by victode-         ###   ########.fr        #
+#    Updated: 2025/10/24 15:35:11 by victode-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OBJS= $(SRCS:.c=.o)
 # Bonus files and objects to compile
 BONUS= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-BON_OBJS= $(BONUS:.c=.o)
+BONUS_OBJS= $(BONUS:.c=.o)
 
 # Compile and Flag commands
 CC= cc
@@ -45,9 +45,9 @@ $(NAME): $(OBJS)
 	$(COMPRESS) $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-# Rule: bonus = 
-bonus: $(BON_OBJS)
-	$(COMPRESS) $(NAME) $(BON_OBJS)
+# Rule: bonus = compress bonus objects into library
+bonus: $(BONUS_OBJS)
+	$(COMPRESS) $(NAME) $(BONUS_OBJS)
 
 # Compile the objects
 %.o: %.c
@@ -64,7 +64,7 @@ fclean: clean
 # Rule: re = equivalent to <make fclean> and <make all>
 re: fclean all
 
-#test: $(NAME) main.c
-#	$(CC) $(CFLAGS) main.c -L. -lft
+# test: $(NAME) main.c
+# 	$(CC) $(CFLAGS) main.c -L. -lft -o test
 
 .PHONY: all clean fclean re test

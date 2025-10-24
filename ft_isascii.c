@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 02:40:47 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/01 12:03:40 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:14:30 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }
+/*
+int	main(void)
+{
+	char c = '~';
+	printf("Result: %d;\n", ft_isascii(c));
+}
+*/

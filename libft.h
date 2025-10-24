@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 22:40:45 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/09 18:49:56 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:57:10 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 /* ********************************************* */
 /*              MANDATORY FUNCTIONS              */

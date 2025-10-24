@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 23:23:52 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/01 12:03:32 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 13:39:24 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
+/*
+int	main(void)
+{
+	char c = 'a';
+	printf("Result: %d;\n", ft_isalpha(c));
+}
+*/

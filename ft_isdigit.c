@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 02:24:51 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/01 12:03:47 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 13:41:33 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
+/*
+int	main(void)
+{
+	char c = '7';
+	printf("Result: %d;\n", ft_isdigit(c));
+}
+*/

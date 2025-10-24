@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 01:52:29 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/29 14:39:57 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:54:44 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*
+int main(void)
+{
+	char src[] = "Hello World!";
+	char dst[] = "Howdy people of the world!";
+	
+	printf("Before: %s\n", dst);
+	char *res = ft_memcpy(dst, src, 6);
+	printf("Result: %s\n", res);
+}
+*/
