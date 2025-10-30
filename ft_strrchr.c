@@ -5,13 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 19:14:22 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 22:23:23 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 16:27:03 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:36:23 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Locates the last occurrence of a character in a string.
+ *
+ * @param s The string to search in.
+ * @param c The character to locate (interpreted as unsigned char).
+ * @return A pointer to the last occurrence of c, or NULL if not found.
+ */
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
@@ -25,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + i);
 		i--;
 	}
-	if ((unsigned char)c == 0)
+	if ((unsigned char)c == '\0')
 		return ((char *)s);
 	return (NULL);
 }

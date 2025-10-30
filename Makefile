@@ -6,7 +6,7 @@
 #    By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/25 22:40:56 by victode-          #+#    #+#              #
-#    Updated: 2025/10/24 15:35:11 by victode-         ###   ########.fr        #
+#    Updated: 2025/10/30 16:34:40 by victode-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,10 @@ all: $(NAME)
 # Libft.a = compress objects and create library
 $(NAME): $(OBJS)
 	$(COMPRESS) $(NAME) $(OBJS)
-	ranlib $(NAME)
 
 # Rule: bonus = compress bonus objects into library
-bonus: $(BONUS_OBJS)
-	$(COMPRESS) $(NAME) $(BONUS_OBJS)
+bonus: $(OBJS) $(BONUS_OBJS)
+	$(COMPRESS) $(NAME) $(OBJS) $(BONUS_OBJS)
 
 # Compile the objects
 %.o: %.c
@@ -55,7 +54,7 @@ bonus: $(BONUS_OBJS)
 
 # Rule: clean = remove temporary files (objects)
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 # Rule: fclean = remove all files (objects and libft.a)
 fclean: clean
@@ -64,7 +63,4 @@ fclean: clean
 # Rule: re = equivalent to <make fclean> and <make all>
 re: fclean all
 
-# test: $(NAME) main.c
-# 	$(CC) $(CFLAGS) main.c -L. -lft -o test
-
-.PHONY: all clean fclean re test
+.PHONY: all bonus clean fclean re 

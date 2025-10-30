@@ -5,17 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/06 23:25:13 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/25 00:47:56 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/21 18:05:14 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:50:46 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Writes a string to the given file descriptor.
+ *
+ * @param s The string to write.
+ * @param fd The file descriptor to write to.
+ */
 void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
-		ft_putchar_fd(*s++, fd);
+		write (fd, s++, 1);
 }
 /*
 int main(void)

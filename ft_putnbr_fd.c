@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/06 23:27:03 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/25 00:47:49 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/21 18:23:40 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:51:14 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Writes an integer as a string to the given file descriptor.
+ *
+ * @param n The integer to write.
+ * @param fd The file descriptor to write to.
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;

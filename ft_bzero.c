@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/28 01:46:27 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 14:44:00 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 13:05:26 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 16:50:40 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Sets all bytes in a block of memory to zero.
+ *
+ * @param s Pointer to the memory area.
+ * @param n Number of bytes to set to zero.
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);

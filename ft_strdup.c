@@ -5,13 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 03:25:47 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/26 16:18:39 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/20 21:08:19 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 12:13:00 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Duplicates a string by allocating new memory for a copy.
+ *
+ * @param s The string to duplicate.
+ * @return A pointer to the newly allocated copy of s1, or NULL if
+ * 		   allocation fails.
+ */
 char	*ft_strdup(const char *s)
 {
 	size_t	i;
@@ -26,6 +32,22 @@ char	*ft_strdup(const char *s)
 		dup[i] = s[i];
 		i++;
 	}
-	dup[i] = 0;
+	dup[i] = '\0';
 	return (dup);
 }
+/*
+int	main(void)
+{
+	char *src = "Hello, World!!!";
+	char *dest = ft_strdup(src);
+
+	if (!dest)
+	{
+		printf("Strdup failed!");
+		return (1);
+	}
+	printf("Original string: %s;\n", src);
+	printf("Copied string: %s;\n", dest);
+	free(dest);
+}
+*/

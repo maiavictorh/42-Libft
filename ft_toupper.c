@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 03:37:37 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/25 00:40:44 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 15:26:53 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:43:11 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Converts a lowercase letter to uppercase.
+ *
+ * @param c Character to convert.
+ * @return The uppercase equivalent if c is lowercase, otherwise c unchanged.
+ */
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
@@ -21,7 +26,7 @@ int	ft_toupper(int c)
 /*
 int main(void)
 {
-	char c = 'a';
+	char c = 'c';
 
 	printf("%c = %c\n", c, ft_toupper(c));
 }

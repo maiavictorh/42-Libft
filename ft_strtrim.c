@@ -5,23 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 18:26:16 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/25 00:19:22 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/21 17:22:44 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 17:25:06 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Erases the 'set' characters from the start and the end of the string.
+ * 
+ * @param s1 String to be trimmed.
+ * @param set Characters to erase.
+ * @return A string result of the trim.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
 	size_t	start;
 	size_t	end;
-	char	*trim;
 
-	if (!s1)
-		return (NULL);
-	if (s1[0] == 0)
+	if (!set)
+		return ((char *)s1);
+	if (s1[0] == '\0')
 		return (ft_strdup(""));
 	start = 0;
 	end = ft_strlen(s1) - 1;
@@ -29,23 +33,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end > start && ft_strchr(set, s1[end]))
 		end--;
-	trim = (char *)malloc(end - start + 2);
-	if (!trim)
-		return (NULL);
-	i = 0;
-	while (start <= end)
-		trim[i++] = s1[start++];
-	trim[i] = 0;
-	return (trim);
+	return (ft_substr(s1, start, end - start + 1));
 }
-/*
-int main(void)
+/* int main(void)
 {
 	char *s = "----Hello World++++";
-	char *set = "-+";
+	char *set = "-";
 
 	printf("Before: %s;\n", s);
 	char *res = ft_strtrim(s, set);
 	printf("Result: %s;\n", res);
 }
-*/
+ */

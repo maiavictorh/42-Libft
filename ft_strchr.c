@@ -5,13 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 13:59:31 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 22:23:33 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 16:00:31 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:27:22 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Locates the first occurrence of a character in a string.
+ *
+ * @param s The string to search in.
+ * @param c The character to locate (interpreted as unsigned char).
+ * @return A pointer to the first occurrence of c, or NULL if not found.
+ */
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
@@ -20,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if ((char)c == 0)
+	if ((char)c == '\0')
 		return ((char *)s);
 	return (NULL);
 }

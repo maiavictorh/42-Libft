@@ -5,23 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 22:41:12 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/25 00:43:33 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/20 13:44:06 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:37:59 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Converts a string to an integer.
+ *
+ * @param nptr The string representing the number.
+ * @return The converted integer value.
+ */
 int	ft_atoi(const char *nptr)
 {
-	int	res;
-	int	sign;
+	int		num;
+	int		sign;
 
-	res = 0;
+	num = 0;
 	sign = 1;
 	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
 		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	if (*nptr == '+' || *nptr == '-')
 	{
 		if (*nptr == '-')
 			sign = -sign;
@@ -29,10 +34,10 @@ int	ft_atoi(const char *nptr)
 	}
 	while (ft_isdigit(*nptr))
 	{
-		res = res * 10 + (*nptr - '0');
+		num = num * 10 + (*nptr - '0');
 		nptr++;
 	}
-	return (sign * res);
+	return (sign * num);
 }
 /*
 int main(void)

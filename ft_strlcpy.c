@@ -5,19 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 04:01:28 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/25 00:06:14 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 14:35:21 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 12:37:52 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Copies a string from src to dst with size limitation.
+ *
+ * @param dst Destination buffer.
+ * @param src Source string.
+ * @param size Maximum size of the destination buffer.
+ * @return The total length of the string it tried to create (length of src).
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	len;
+	size_t	src_len;
 
-	len = ft_strlen(src);
+	src_len = ft_strlen(src);
 	if (size > 0)
 	{
 		i = 0;
@@ -26,7 +33,20 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			dst[i] = src[i];
 			i++;
 		}
-		dst[i] = 0;
+		dst[i] = '\0';
 	}
-	return (len);
+	return (src_len);
 }
+/*
+int main(void)
+{
+	char dst[20] = "Howdy World!";
+	const char *src = "Hello World!";
+
+	size_t result = ft_strlcpy(dst, src, 6);
+	printf("Src: %s\n", src);
+	printf("Dst: %s\n", dst);
+	printf("Return: %zu\n", result);
+	return 0;
+}
+*/

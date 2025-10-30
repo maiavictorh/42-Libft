@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 02:24:51 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 13:41:33 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/15 17:21:57 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:39:13 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Checks if a character is a decimal digit (0–9).
+ *
+ * @param c Character to check.
+ * @return Non-zero if c is a digit, zero otherwise.
+ */
 int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');

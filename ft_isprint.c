@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 02:55:23 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 14:18:59 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 12:37:37 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:42:58 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Checks if a character is printable (including space).
+ *
+ * @param c Character to check.
+ * @return Non-zero if c is printable, zero otherwise.
+ */
 int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);

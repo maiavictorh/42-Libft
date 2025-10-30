@@ -5,16 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 18:06:37 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/09 21:01:36 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/22 15:01:48 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 13:03:04 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_nblen(int n)
+/**
+ * @brief Calculates the length of an integer (Equivalent to a string).
+ *
+ * @param n The integer to be converted.
+ * @return The number of characters the integer may have.
+ */
+static size_t	ft_numblen(int n)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	if (n == 0)
@@ -23,12 +28,19 @@ static size_t	ft_nblen(int n)
 		len++;
 	while (n != 0)
 	{
-		n /= 10;
 		len++;
+		n /= 10;
 	}
 	return (len);
 }
 
+/**
+ * @brief Converts an integer to a newly allocated string representation.
+ *
+ * @param n The integer to convert.
+ * @return A pointer to the newly allocated string representing the integer.
+ *         Returns NULL if memory allocation fails.
+ */
 char	*ft_itoa(int n)
 {
 	long	nb;
@@ -36,16 +48,16 @@ char	*ft_itoa(int n)
 	char	*res;
 
 	nb = n;
-	len = ft_nblen(n);
+	len = ft_numblen(n);
 	res = (char *)malloc(len + 1);
 	if (!res)
 		return (NULL);
-	if (nb < 0)
+	if (n < 0)
 	{
 		res[0] = '-';
 		nb = -nb;
 	}
-	res[len] = 0;
+	res[len] = '\0';
 	while (len-- > 0 && res[len] != '-')
 	{
 		res[len] = nb % 10 + '0';
@@ -53,3 +65,15 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
+/*
+int main(void)
+{
+	char *s = ft_itoa(-2147483647);
+
+	printf("Result: %s\n", s);
+	printf("Decimal: ");
+	for (size_t i = 0; i < ft_strlen(s) + 1; i++)
+		printf("%d ", s[i]);
+	printf("\n");
+}
+*/

@@ -5,22 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 14:17:49 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/10 14:31:33 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/23 15:50:12 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 18:01:43 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Counts the number of nodes in a list.
+ *
+ * @param lst The beginning of the list.
+ * @return The length of the list.
+ */
 int	ft_lstsize(t_list *lst)
 {
-	size_t	size;
+	size_t	count;
 
-	size = 0;
-	while (lst != NULL)
+	count = 0;
+	while (lst)
 	{
+		count++;
 		lst = lst->next;
-		size++;
 	}
-	return (size);
+	return (count);
 }

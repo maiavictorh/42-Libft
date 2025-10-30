@@ -5,21 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 13:44:04 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/10 13:51:39 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/23 15:22:05 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 17:57:40 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Allocates memory and returns a new node.
+ *        The member variable 'content' is initialized with the value of the
+ *        parameter 'content'.
+ *        The variable 'next' is initialized to NULL.
+ *
+ * @param content The content to create the node with.
+ * @return The new node, or NULL if the allocation fails.
+ */
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*list;
+	t_list	*lst;
 
-	list = (t_list *)malloc(sizeof(t_list));
-	if (!list)
+	lst = (t_list *)malloc(sizeof(t_list));
+	if (!lst)
 		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }

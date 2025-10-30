@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 22:40:45 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 14:57:10 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/20 13:44:49 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 15:48:03 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 /* ********************************************* */
 
 /*======= Type functions =======*/
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -29,6 +30,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 
 /*============= Memory manipulation functions =============*/
+
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -38,6 +40,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 /*============= String manipulation functions =============*/
+
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
@@ -54,12 +57,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strdup(const char *s);
 
 /*======= Conversion functions =======*/
+
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_itoa(int n);
 int		ft_atoi(const char *nptr);
 
 /*========= Output functions =========*/
+
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
@@ -76,6 +81,7 @@ typedef struct s_list
 }					t_list;
 
 /*============ List functions ============*/
+
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);

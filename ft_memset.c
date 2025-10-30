@@ -5,26 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 12:27:10 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 14:34:42 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 12:52:48 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 16:48:49 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Fills a block of memory with a specific byte value.
+ * 
+ * @param s Pointer to the memory area to fill.
+ * @param c The value to be set (interpreted as unsigned char).
+ * @param n Number of bytes to set.
+ * @return A pointer to the memory area s.
+ */
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*byte;
+	size_t	i;
+	char	*ptr;
 
-	byte = s;
-	while (n--)
-		*byte++ = c;
+	i = 0;
+	ptr = (char *)s;
+	while (i < n)
+		ptr[i++] = c;
 	return (s);
 }
 /*
 int main(void)
 {
 	char s[] = "Hello World!";
-	printf("Result: %s;\n", ft_memset(s, '-', 4));
+	printf("Result: %s;\n", (char *)ft_memset(s, '-', 4));
 }
 */

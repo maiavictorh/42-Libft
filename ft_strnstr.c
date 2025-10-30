@@ -5,13 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 00:25:18 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/25 00:12:21 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/20 20:27:09 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 12:28:52 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Locates a substring within a string, limited by length.
+ *
+ * @param big The main string to search in.
+ * @param little The substring to find.
+ * @param len Maximum number of characters to search.
+ * @return A pointer to the beginning of the located substring,
+ * 		   or NULL if not found.
+ */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

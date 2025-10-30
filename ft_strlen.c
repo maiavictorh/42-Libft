@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 23:00:28 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/24 23:57:28 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 12:47:38 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:25:00 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Calculates the length of a null-terminated string.
+ *
+ * @param s Pointer to the string.
+ * @return The number of characters in the string, excluding the null terminator.
+ */
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

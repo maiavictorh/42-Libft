@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 13:58:12 by victode-          #+#    #+#             */
-/*   Updated: 2025/09/10 14:08:00 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/23 15:36:50 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/30 18:01:02 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Adds the node 'new' at the beginning of the list.
+ *
+ * @param lst The address of a pointer to the first node of a list.
+ * @param new The address of a pointer to the node to be added to the list.
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;

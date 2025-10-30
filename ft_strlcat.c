@@ -5,33 +5,52 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/31 01:56:38 by victode-          #+#    #+#             */
-/*   Updated: 2025/08/31 02:26:34 by victode-         ###   ########.fr       */
+/*   Created: 2025/10/16 14:53:30 by victode-          #+#    #+#             */
+/*   Updated: 2025/10/29 17:26:52 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+ * @brief Concatenates src to dst ensuring null termination and size safety.
+ *
+ * @param dst Destination buffer (must be null-terminated).
+ * @param src Source string to append.
+ * @param size Total size of the destination buffer.
+ * @return The total length of the string it tried to create (dst + src length).
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
 	size_t	dst_len;
 	size_t	src_len;
-	size_t	buf;
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dst_len >= size)
-		return (src_len + size);
-	buf = size - dst_len - 1;
+		return (size + src_len);
 	if (size > 0)
 	{
 		i = dst_len;
 		j = 0;
-		while (src[j] && j < buf)
+		while (src[j] && j < size - dst_len - 1)
 			dst[i++] = src[j++];
-		dst[i] = 0;
+		dst[i] = '\0';
 	}
 	return (dst_len + src_len);
 }
+/*
+int main(void)
+{
+	char dst[20] = "Hello ";
+	const char *src = "World";
+
+	printf("Src: %s\n", src);
+	printf("Dst: %s\n", dst);
+	size_t result = ft_strlcat(dst, src, sizeof(dst));    
+	printf("Result: %s\n", dst);
+	printf("Return: %zu\n", result);
+	return 0;
+}
+*/
