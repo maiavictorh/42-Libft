@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:05:11 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 18:14:57 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/31 15:43:52 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*node;
+	void	*content;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
-		node = ft_lstnew(f(lst->content));
+		content = (f(lst->content));
+		node = ft_lstnew(content);
 		if (!node)
 		{
+			del(content);
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}

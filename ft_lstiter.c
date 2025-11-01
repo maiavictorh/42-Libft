@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:04:53 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 18:14:41 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/31 16:11:14 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,12 @@
  */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst)
+	if (lst && f)
 	{
-		f(lst->content);
-		lst = lst->next;
+		while (lst)
+		{
+			f(lst->content);
+			lst = lst->next;
+		}
 	}
 }

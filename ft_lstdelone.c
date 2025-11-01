@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:01:48 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 18:06:57 by victode-         ###   ########.fr       */
+/*   Updated: 2025/10/31 16:11:00 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
-	free(lst);
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

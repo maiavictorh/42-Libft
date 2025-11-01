@@ -6,7 +6,7 @@
 #    By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/25 22:40:56 by victode-          #+#    #+#              #
-#    Updated: 2025/10/30 16:34:40 by victode-         ###   ########.fr        #
+#    Updated: 2025/10/30 18:54:34 by victode-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,4 +63,4 @@ fclean: clean
 # Rule: re = equivalent to <make fclean> and <make all>
 re: fclean all
 
-.PHONY: all bonus clean fclean re 
+.PHONY: all bonus clean fclean re
