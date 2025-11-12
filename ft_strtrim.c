@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:22:44 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 17:25:06 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:06:03 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char *s = "----Hello World++++";
 	char *set = "-";
 
-	printf("Before: %s;\n", s);
+	ft_printf("Before: %s;\n", s);
 	char *res = ft_strtrim(s, set);
-	printf("Result: %s;\n", res);
+	ft_printf("Result: %s;\n", res);
 }
  */

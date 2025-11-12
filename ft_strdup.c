@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 21:08:19 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 12:13:00 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:05:12 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ int	main(void)
 
 	if (!dest)
 	{
-		printf("Strdup failed!");
+		ft_printf("Strdup failed!");
 		return (1);
 	}
-	printf("Original string: %s;\n", src);
-	printf("Copied string: %s;\n", dest);
+	ft_printf("Original string: %s;\n", src);
+	ft_printf("Copied string: %s;\n", dest);
 	free(dest);
 }
 */

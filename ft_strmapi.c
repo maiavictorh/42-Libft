@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:07:26 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:24:01 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:05:37 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	next_char(unsigned int i, char c)
 int main(void)
 {
 	char *result = ft_strmapi("abc", next_char);
-	printf("ft_strmapi: 'abc' -> '%s' (should be 'bcd')\n", result);
+	ft_printf("ft_strmapi: 'abc' -> '%s' (should be 'bcd')\n", result);
 	free(result);
 }
 */

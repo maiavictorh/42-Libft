@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 14:18:42 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:26:17 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:50 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,22 @@ int main(void)
 	char s[] = "Howdy World!";
 
 	// Normal case:
-	printf("Before: %s;\n", s);
+	ft_printf("Before: %s;\n", s);
 	ft_memmove(s, "Hello", 5);
-	printf("Result: %s;\n", s);
+	ft_printf("Result: %s;\n", s);
 
 	char s2[] = "abcdefgh";
 
 	// Overlapping left:
-	printf("Before: %s;\n", s2);
+	ft_printf("Before: %s;\n", s2);
 	ft_memmove(s2, s2 + 2, 5);
-	printf("Result: %s;\n", s2);
+	ft_printf("Result: %s;\n", s2);
 
 	char s3[] = "ABCDEFGH";
 
 	// Overlapping right:
-	printf("Before: %s;\n", s3);
+	ft_printf("Before: %s;\n", s3);
 	ft_memmove(s3 + 2, s3, 5);
-	printf("Result: %s;\n", s3);
+	ft_printf("Result: %s;\n", s3);
 }
 */

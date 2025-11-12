@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:47:14 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/31 15:48:24 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:59:07 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,28 +32,28 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
-/*
+/* 
 int main(void)
 {
 	int *tab = (int *)ft_calloc(5, sizeof(int));
 
-	printf("\n1. Integer tab test:\n");
+	ft_printf("\n1. Integer tab test:\n");
 	if (!tab)
 		return 1;
 	for (int i = 0; i < 5; i++)
-		printf("tab[%d] = %d\n", i, tab[i]);
+		ft_printf("tab[%d] = %d\n", i, tab[i]);
 	free(tab);
 
 	char *s = (char *)ft_calloc(20, sizeof(char));
 
-	printf("\n2. String test:\n");
+	ft_printf("\n2. String test:\n");
 	if (!s)
 		return 1;
-	printf("Empty String: \"");
+	ft_printf("Empty String: \"");
 	for (int i = 0; i < 12; i++)
-		printf("%d", s[i]);
+		ft_printf("%d", s[i]);
 	ft_strlcpy(s, "Hello World", 12);
-	printf("\"\nAfter copy: \"%s\"\n", s);
+	ft_printf("\"\nAfter copy: \"%s\"\n", s);
 	free(s);
 }
-*/
+ */

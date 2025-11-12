@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:37:37 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:42:58 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:20 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int	ft_isprint(int c)
 int	main(void)
 {
 	char c = '~';
-	printf("Result: %d;\n", ft_isprint(c));
+	ft_printf("Result: %d;\n", ft_isprint(c));
 }
 */

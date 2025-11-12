@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:12:11 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 16:51:45 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:05:16 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int main(void)
 {
 	char s[] = "hello world!";
 
-	printf("Before: %s\n", s);
+	ft_printf("Before: %s\n", s);
 	ft_striteri(s, test_toupper);
-	printf("Result: %s\n", s);
+	ft_printf("Result: %s\n", s);
 }
 */

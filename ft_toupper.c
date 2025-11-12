@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:26:53 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:43:11 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:06:12 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int main(void)
 {
 	char c = 'c';
 
-	printf("%c = %c\n", c, ft_toupper(c));
+	ft_printf("%c = %c\n", c, ft_toupper(c));
 }
 */

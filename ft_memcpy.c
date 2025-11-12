@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 13:11:27 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:26:22 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:43 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int main(void)
 	char src[] = "Hello World!";
 	char dst[] = "Howdy people of the world!";
 	
-	printf("Before: %s\n", dst);
+	ft_printf("Before: %s\n", dst);
 	char *res = ft_memcpy(dst, src, 6);
-	printf("Result: %s\n", res);
+	ft_printf("Result: %s\n", res);
 }
 */

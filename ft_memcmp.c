@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:37:17 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:22:58 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:36 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ int main(void)
 	char *s1 = "Hello world!";
 	char *s2 = "Hello World!";
 
-	printf("Result: %d;\n", ft_memcmp(s1, s2, 7));
+	ft_printf("Result: %d;\n", ft_memcmp(s1, s2, 7));
 }
 */

@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:27:09 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 12:28:52 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:05:43 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ int	main()
 	char *big = "Hello people of the world!";
 	char *little = "of";
 	char *result = ft_strnstr(big, little, 15);
-	printf("Big: %s;\nLittle: %s;\nResult: %s;\n", big, little, result);
+	ft_printf("Big: %s;\nLittle: %s;\nResult: %s;\n", big, little, result);
 }
 */

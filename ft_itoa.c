@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:01:48 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 13:03:04 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:24 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,10 @@ int main(void)
 {
 	char *s = ft_itoa(-2147483647);
 
-	printf("Result: %s\n", s);
-	printf("Decimal: ");
+	ft_printf("Result: %s\n", s);
+	ft_printf("Decimal: ");
 	for (size_t i = 0; i < ft_strlen(s) + 1; i++)
-		printf("%d ", s[i]);
-	printf("\n");
+		ft_printf("%d ", s[i]);
+	ft_printf("\n");
 }
 */

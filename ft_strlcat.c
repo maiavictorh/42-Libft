@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 14:53:30 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:26:52 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:05:25 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ int main(void)
 	char dst[20] = "Hello ";
 	const char *src = "World";
 
-	printf("Src: %s\n", src);
-	printf("Dst: %s\n", dst);
+	ft_printf("Src: %s\n", src);
+	ft_printf("Dst: %s\n", dst);
 	size_t result = ft_strlcat(dst, src, sizeof(dst));    
-	printf("Result: %s\n", dst);
-	printf("Return: %zu\n", result);
+	ft_printf("Result: %s\n", dst);
+	ft_printf("Return: %zu\n", result);
 	return 0;
 }
 */

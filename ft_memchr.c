@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:20:20 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:22:15 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:33 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ int main(void)
 {
 	const char *s = "Hello World!";
 
-	printf("Result: %s;\n", (char *)ft_memchr(s, 'W', 7));
+	ft_printf("Result: %s;\n", (char *)ft_memchr(s, 'W', 7));
 }
 */

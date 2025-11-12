@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:02:59 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:49:50 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:15:51 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
  */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
+	t_ull	i;
+	t_ull	j;
 	char	*join;
 
 	i = 0;
@@ -38,14 +38,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i] = '\0';
 	return (join);
 }
-/*
+/* 
 int main(int ac, char **av)
 {
 	if (ac == 3)
 	{
 		char *join = ft_strjoin(av[1], av[2]);
-		printf("Result: %s", join);
+		ft_printf("Result: %s", join);
 	}
-	printf("\n");
+	ft_printf("\n");
 }
-*/
+ */

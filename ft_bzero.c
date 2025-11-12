@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 13:05:26 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 16:50:40 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:56:02 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int main(void)
 	char s[] = "Hello World!";
 	
 	ft_bzero(s, 4);
-	printf("Result: ");
+	ft_printf("Result: ");
 	for (size_t i = 0; i < 4; i++)
-		printf("%x", s[i]);
+		ft_printf("%x", s[i]);
 	for (size_t i = 0; i < 13; i++)
-		printf("%c", s[i]);
-	printf("\n");
+		ft_printf("%c", s[i]);
+	ft_printf("\n");
 }
-*/
+ */

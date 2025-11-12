@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:21:57 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:39:13 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:12 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int	ft_isdigit(int c)
 int	main(void)
 {
 	char c = '7';
-	printf("Result: %d;\n", ft_isdigit(c));
+	ft_printf("Result: %d;\n", ft_isdigit(c));
 }
 */

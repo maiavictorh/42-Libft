@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 12:06:10 by victode-          #+#    #+#             */
-/*   Updated: 2025/11/01 16:46:27 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:14:28 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
  * @param c The delimiter character that separates words.
  * @return The length of the word before the delimiter or end of string.
  */
-static size_t	ft_word_len(char const *s, char c)
+static t_ull	ft_word_len(char const *s, char c)
 {
-	size_t	i;
+	t_ull	i;
 
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -35,10 +35,10 @@ static size_t	ft_word_len(char const *s, char c)
  * @param c The delimiter character used to split the string.
  * @return The total number of words found in the string.
  */
-static size_t	ft_word_count(char const *s, char c)
+static t_ull	ft_word_count(char const *s, char c)
 {
-	size_t	i;
-	size_t	count;
+	t_ull	i;
+	t_ull	count;
 
 	i = 0;
 	count = 0;
@@ -64,7 +64,7 @@ static size_t	ft_word_count(char const *s, char c)
  */
 static void	free_split(char **split)
 {
-	size_t	i;
+	t_ull	i;
 
 	i = 0;
 	while (split[i])
@@ -88,9 +88,9 @@ static void	free_split(char **split)
  */
 char	**split_words(char const *s, char c, char **split)
 {
-	size_t	i;
-	size_t	j;
-	size_t	wd_len;
+	t_ull	i;
+	t_ull	j;
+	t_ull	wd_len;
 
 	i = 0;
 	j = 0;
@@ -130,21 +130,21 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split_words(s, c, split));
 }
-/*
-int main(int ac, char **av)
+
+/* int main(int ac, char **av)
 {
 	if (ac == 3 && ft_strlen(av[2]) == 1)
 	{
 		char **split = ft_split(av[1], av[2][0]);
 
-		printf("Result:\n");
-		for (size_t i = 0; i < ft_word_count(av[1], av[2][0]); i++)
+		ft_printf("Result:\n");
+		for (t_ull i = 0; i < ft_word_count(av[1], av[2][0]); i++)
 		{
-			printf("   \"%s\"\n", split[i]);
+			ft_printf("   \"%s\"\n", split[i]);
 			free(split[i]);
 		}
-		printf("Word count: %lu", ft_word_count(av[1], av[2][0]));
+		ft_printf("Word count: %u", ft_word_count(av[1], av[2][0]));
 	}
-	printf("\n");
+	ft_printf("\n");
 }
-*/
+ */

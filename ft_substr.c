@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 15:16:49 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 16:48:57 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:06:06 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int main(void)
 	char *s = "Hello World!";
 	char *sub = ft_substr(s, 6, ft_strlen(s));
 
-	printf("Original: %s;\nSubstring: %s;\n", s, sub);
+	ft_printf("Original: %s;\nSubstring: %s;\n", s, sub);
 }
 */

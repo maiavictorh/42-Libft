@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:02:09 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 17:38:26 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:59:48 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int	ft_isalpha(int c)
 int	main(void)
 {
 	char c = 'a';
-	printf("Result: %d;\n", ft_isalpha(c));
+	ft_printf("Result: %d;\n", ft_isalpha(c));
 }
 */

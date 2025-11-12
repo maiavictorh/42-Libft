@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 14:35:21 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/30 12:37:52 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:05:29 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int main(void)
 	const char *src = "Hello World!";
 
 	size_t result = ft_strlcpy(dst, src, 6);
-	printf("Src: %s\n", src);
-	printf("Dst: %s\n", dst);
-	printf("Return: %zu\n", result);
+	ft_printf("Src: %s\n", src);
+	ft_printf("Dst: %s\n", dst);
+	ft_printf("Return: %zu\n", result);
 	return 0;
 }
 */

@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:52:48 by victode-          #+#    #+#             */
-/*   Updated: 2025/10/29 16:48:49 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:04:54 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ void	*ft_memset(void *s, int c, size_t n)
 int main(void)
 {
 	char s[] = "Hello World!";
-	printf("Result: %s;\n", (char *)ft_memset(s, '-', 4));
+	ft_printf("Result: %s;\n", (char *)ft_memset(s, '-', 4));
 }
 */

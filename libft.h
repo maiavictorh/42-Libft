@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:44:49 by victode-          #+#    #+#             */
-/*   Updated: 2025/11/01 16:46:47 by victode-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:02:41 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,24 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
+# include <stdarg.h>
 
-/* ********************************************* */
-/*              MANDATORY FUNCTIONS              */
-/* ********************************************* */
+# define DEC "0123456789"
+# define HEX "0123456789abcdef"
+# define UPHEX "0123456789ABCDEF"
+# define SPEC "cspdiuxX%"
+
+typedef unsigned long long	t_ull;
+typedef unsigned int		t_ui;
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+/* ========= ft_printf ========= */
+
+int		ft_printf(const char *format, ...);
 
 /*======= Type functions =======*/
 
@@ -69,16 +82,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-/* ********************************************* */
-/*                BONUS FUNCTIONS                */
-/* ********************************************* */
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
 
 /*============ List functions ============*/
 
