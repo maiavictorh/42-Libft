@@ -6,7 +6,7 @@
 /*   By: victode- <victode-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:44:49 by victode-          #+#    #+#             */
-/*   Updated: 2025/11/12 14:02:41 by victode-         ###   ########.fr       */
+/*   Updated: 2025/12/03 22:38:53 by victode-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,18 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <stdio.h>
+# include <fcntl.h>
 
 # define DEC "0123456789"
 # define HEX "0123456789abcdef"
 # define UPHEX "0123456789ABCDEF"
 # define SPEC "cspdiuxX%"
+# define FD_MAX 1024
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef unsigned long long	t_ull;
 typedef unsigned int		t_ui;
@@ -30,9 +37,10 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-/* ========= ft_printf ========= */
+/* ========= Extra functions ========= */
 
 int		ft_printf(const char *format, ...);
+char	*get_next_line(int fd);
 
 /*======= Type functions =======*/
 
